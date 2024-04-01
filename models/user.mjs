@@ -18,11 +18,21 @@ const UserSchema = new Mongoose.Schema({
     image: { type: String, required: true },
     description: String,
     estado: { type: Boolean },
-    createdAt: { type: Date, default: Date.now }
+    createdAt: { type: Date, default: Date.now },
+    comentario:[{
+      imagenPerfil:{type:String},
+      respuesta:{type:String},
+      nombre:{type:String},}],
+      idUsuario:{type:String},
+    likes:[{
+      userId:{type:String},
+      estado:{type:Boolean}
+    }]
   }],
   roll: { type: String },
   estado: { type: Boolean }
 });
+
 
 // Hook pre para actualizar la fecha de creación de la publicación antes de guardarla
 UserSchema.pre("save", function (next) {
