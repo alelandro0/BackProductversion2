@@ -1,4 +1,3 @@
-
 import { API_KEY_GEMINI, START_CHAT, GENERATION_CONFIG } from '../models/chatia.mjs';
 import { GoogleGenerativeAI } from "@google/generative-ai";
 

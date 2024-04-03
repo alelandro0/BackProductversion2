@@ -57,7 +57,8 @@ export const getPublication = async (req, res) => {
             image: pub.image,
             description: pub.description,
             createdAt: pub.createdAt,
-            likes:pub.likes.length
+            likes:pub.likes.length,
+            profesionalId:pub.profesionalId,
         }));
 
         
@@ -122,7 +123,8 @@ export const getPublicationAll = async (req, res) => {
                                          name : nombre,
                                          createdAt:pub.createdAt,
                                          imageProfile:imagenUser,
-                                         likes:pub.likes.length
+                                         likes:pub.likes.length,
+                                         comentario:pub.comentario
                                      }));
         });
 
